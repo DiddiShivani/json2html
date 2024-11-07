@@ -4,16 +4,14 @@ export default function json2html(data) {
         <tr><th>Name</th><th>Age</th><th>Gender</th></tr>
     </thead>
     <tbody>`;
-    data.forEach(row => {
+
+    data.forEach(item => {
         html += `<tr>`;
-        html+=`<td>${item.Name}</td><td>${item.Age}</td>`;
-        html += '</tr>';
+        html += `<td>${item.Name}</td><td>${item.Age}</td><td>${item.Gender || ''}</td>`;
+        html += `</tr>`;
     });
-    if(item.Gender){
-        html+=`<td>${item.Gender}</td>`
-    }
-    html += '</tr>';
-    html += '</tbody></table>';
+
+    html += `</tbody></table>`;
 
     return html;
 }
