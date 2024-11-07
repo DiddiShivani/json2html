@@ -7,7 +7,7 @@ export default function json2html(data) {
 
     data.forEach(item => {
         html += `<tr>`;
-        html += `<td>${item.Name}</td><td>${item.Age}</td><td>${item.Gender || ''}</td>`;
+        html += `<td>${item.Name}</td><td>${item.Age}</td><td>${item.Gender || ''}</td>`;  // Ensure three <td> in each <tr>
         html += `</tr>`;
     });
 
